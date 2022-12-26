@@ -27,24 +27,30 @@
 				{{/if}}
 
 				<div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-					{{#if isLogin}}
-						<button type='button' class='btn btn-primary active'>
-							<a class='text-light text-decoration-none' href='/login'>Login</a>
+					{{#if token}}
+						<button type='button' class='btn btn-danger active'>
+							<a class='text-light text-decoration-none' href='/login'>Logout</a>
 						</button>
 					{{else}}
-						<button type='button' class='btn btn-primary'>
-							<a class='text-light text-decoration-none' href='/login'>Login</a>
-						</button>
-					{{/if}}
+						{{#if isLogin}}
+							<button type='button' class='btn btn-primary active'>
+								<a class='text-light text-decoration-none' href='/login'>Login</a>
+							</button>
+						{{else}}
+							<button type='button' class='btn btn-primary'>
+								<a class='text-light text-decoration-none' href='/login'>Login</a>
+							</button>
+						{{/if}}
 
-					{{#if isRegister}}
-						<button type='button' class='btn btn-success active'>
-							<a class='text-light text-decoration-none' href='/register'>Register</a>
-						</button>
-					{{else}}
-						<button type='button' class='btn btn-success'>
-							<a class='text-light text-decoration-none' href='/register'>Register</a>
-						</button>
+						{{#if isRegister}}
+							<button type='button' class='btn btn-success active'>
+								<a class='text-light text-decoration-none' href='/register'>Register</a>
+							</button>
+						{{else}}
+							<button type='button' class='btn btn-success'>
+								<a class='text-light text-decoration-none' href='/register'>Register</a>
+							</button>
+						{{/if}}
 					{{/if}}
 				</div>
 			</nav>
