@@ -21,4 +21,9 @@ router.get('/add', (req, res) => {
 	})
 })
 
+router.post('/add-products', (req, res) => {
+	console.log(req.body)
+	res.redirect('/')
+})
+
 export default router
