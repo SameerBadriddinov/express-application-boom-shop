@@ -6,4 +6,7 @@ export default {
 
 		return options.inverse(this)
 	},
+	getFullNameFirstCharacter(firstName, lastName) {
+		return firstName.charAt(0) + lastName.charAt(0)
+	},
 }
