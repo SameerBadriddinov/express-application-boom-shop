@@ -1,1 +1,26 @@
-<h1>Main page</h1>
+{{#if products.length}}
+	<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
+		{{#each products}}
+			<div class='col'>
+				<div class='card shadow-sm'>
+					<img src='{{image}}' />
+					<div class='card-body'>
+						<p class='card-text fw-bold'>{{title}}</p>
+						<div class='d-flex justify-content-end align-items-center'>
+							<small class='text-muted fs-5'>{{price}}.00$</small>
+						</div>
+					</div>
+					<div class='card-footer'>
+						<div class='btn-group btn-group-sm' role='group' aria-label='Basic example'>
+							<button type='button' class='btn btn-outline-primary'>Detail</button>
+							<button type='button' class='btn btn-outline-secondary'>Edit</button>
+							<button type='button' class='btn btn-outline-danger'>Delete</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+{{else}}
+	<p>No product</p>
+{{/if}}
