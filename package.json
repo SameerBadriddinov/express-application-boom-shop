@@ -22,6 +22,7 @@
 		"express-session": "^1.17.3",
 		"handlebars": "^4.7.7",
 		"jsonwebtoken": "^9.0.0",
+		"moment": "^2.29.4",
 		"mongoose": "^6.8.1"
 	},
 	"devDependencies": {

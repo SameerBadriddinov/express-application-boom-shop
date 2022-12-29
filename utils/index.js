@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export default {
 	ifequal(a, b, options) {
 		if (a == b) {
@@ -8,5 +10,8 @@ export default {
 	},
 	getFullNameFirstCharacter(firstName, lastName) {
 		return firstName.charAt(0) + lastName.charAt(0)
+	},
+	formatDate(date) {
+		return moment(date).format('DD MMM, YYYY')
 	},
 }
