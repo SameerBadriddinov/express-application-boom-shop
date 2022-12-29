@@ -14,3 +14,11 @@
 	padding: 0;
 	margin: 0;
 }
+
+.product-image {
+	width: 100%;
+	height: 70vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

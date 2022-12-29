@@ -13,7 +13,7 @@
 					</div>
 					<div class='card-footer'>
 						<div class='btn-group btn-group-sm' role='group' aria-label='Basic example'>
-							<button type='button' class='btn btn-outline-primary'>Detail</button>
+							<a type='button' class='btn btn-outline-primary' href='/product/{{_id}}'>Detail</a>
 							{{#if @root.token}}
 								{{#ifequal user @root.userId}}
 									<button type='button' class='btn btn-outline-secondary'>Edit</button>
