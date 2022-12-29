@@ -16,7 +16,7 @@
 							<a type='button' class='btn btn-outline-primary' href='/product/{{_id}}'>Detail</a>
 							{{#if @root.token}}
 								{{#ifequal user @root.userId}}
-									<button type='button' class='btn btn-outline-secondary'>Edit</button>
+									<a type='button' class='btn btn-outline-secondary' href='/edit-product/{{_id}}'>Edit</a>
 									<button type='button' class='btn btn-outline-danger'>Delete</button>
 								{{/ifequal}}
 							{{/if}}
