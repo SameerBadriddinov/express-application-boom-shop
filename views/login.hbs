@@ -1,21 +1,28 @@
-<div class='w-75 mx-auto'>
-	<p class='fs-1'>Login</p>
-	{{#if loginError}}
-		<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-			<strong>Error!</strong>
-			{{loginError}}
-			<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+<div class='row'>
+	<div class='col-md-6'>
+		<img src='/log.jpg' width='100%' />
+	</div>
+	<div class='col-md-6'>
+		<div class='mt-10rem w-75 mx-auto'>
+			<p class='fs-1'>Login</p>
+			{{#if loginError}}
+				<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+					<strong>Error!</strong>
+					{{loginError}}
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+				</div>
+			{{/if}}
+			<form action='/login' method='post'>
+				<div class='form-floating mb-3'>
+					<input type='email' class='form-control' name='email' id='floatingInput' placeholder='name@example.com' />
+					<label for='floatingInput'>Email address</label>
+				</div>
+				<div class='form-floating'>
+					<input type='password' class='form-control' name='password' id='floatingPassword' placeholder='Password' />
+					<label for='floatingPassword'>Password</label>
+				</div>
+				<button type='submit' class='btn btn-primary btn-lg mt-3'>Login</button>
+			</form>
 		</div>
-	{{/if}}
-	<form action='/login' method='post'>
-		<div class='form-floating mb-3'>
-			<input type='email' class='form-control' name='email' id='floatingInput' placeholder='name@example.com' />
-			<label for='floatingInput'>Email address</label>
-		</div>
-		<div class='form-floating'>
-			<input type='password' class='form-control' name='password' id='floatingPassword' placeholder='Password' />
-			<label for='floatingPassword'>Password</label>
-		</div>
-		<button type='submit' class='btn btn-primary mt-3'>Login</button>
-	</form>
+	</div>
 </div>
